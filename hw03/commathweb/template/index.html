@@ -1,0 +1,29 @@
+{% extends 'demopage/base.html' %}
+
+{% block content %}
+
+<section >
+    <div class="container">
+        <div class="row text-center" >
+            <div class="col-md-12">
+                <a class="btn btn-success btn-lg active" role="button" href='/dto32'><i class="fa fa-globe fa-5x icon-custom-1 color-1"></i>
+                <h3>แปลงเลขทศนิยมเป็น IEEE floating point single precision (32-bit)</h3>
+            </div></a>
+            
+
+            
+            <div class="col-md-12">
+                <a class="btn btn-success btn-lg active" role="button" href = '/dto64'><i class="fa fa-globe fa-5x icon-custom-1 color-1"></i>
+                <h3>แปลงเลขทศนิยมเป็น IEEE floating point double precision (64-bit)</h3>
+            </div></a>
+
+
+            <div class="col-md-12">
+                <a class="btn btn-success btn-lg active" role="button" href = '/solve'><i class="fa fa-desktop fa-5x icon-custom-1 color-1"></i>
+                <h3>แก้ระบบสมการเชิงเส้น $Ax = b$</h3></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

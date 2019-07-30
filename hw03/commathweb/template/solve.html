@@ -1,0 +1,46 @@
+{% extends 'demopage/base.html' %}
+
+{% block content %}
+
+    <section class="headline-sec">
+        <div class="overlay ">
+            <h3>แก้ระบบสมการเชิงเส้น $Ax = b$<i class="fa fa-angle-double-right "></i></h3>
+        </div>  
+    </section>
+    <!--HOME SECTION END-->
+
+<section>
+    <div class="container">
+        <div class="row">
+                 <div class="col-md-6" >
+                    <h2><strong> ผลลัพธ์ </strong></h2>
+                        {% for r in results %}
+                            {{r}},
+                        {% endfor %}
+                        <hr>
+                        {% for i, j in mylist %}
+                            {{ i }} = {{ j }} <br>
+                        {% endfor %}
+                    <br>
+                </div>
+        <div class="container">
+            <div class="col-md-6" > 
+                <div class="alert alert-info" >
+                    <div class="form-group">
+                        <h3><strong>กรุณากรอกค่าต่อไปนี้</strong></h3>
+
+                    <form action='' method="post">
+                        {% csrf_token %}
+                        <textarea name = "data" rows="7" cols="20"</textarea> </textarea>
+                        <br><br>
+                        <input type="submit" class="btn btn-primary" >
+                    </form>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock content %}
